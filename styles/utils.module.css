@@ -6,6 +6,7 @@
   width: 15rem;
   height: 15rem;
   margin: 30px;
+  margin-top: 15px;
   border-radius: 8px;
   box-shadow:0 5px 20px 0 rgba(0,0,0,0.15),0 6px 20px 0 rgba(0,0,0,0.15) !important;
   border:1px solid#dfdfdf;
@@ -21,7 +22,7 @@
 .thumbnailcontainer {
   margin-right: 5%;
   margin-left: 5%;
-  margin-top: 50px;
+  margin-top: 150px;
   text-align: center;
 }
 
