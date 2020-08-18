@@ -1,91 +1,92 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
-import utilStyles from '../../styles/utils.module.css'
+
+const images = [1, 2, 2, 2, 2, 1, 2, 2] // sizes;
+const title = 'Abandoned Exploration'
+const date = 'August 2019'
+const base_url = '/images/pitt_explore/';
 
 export default function PittExplore() {
-
   const [opened, setOpened] = useState(false);
-  const openImage = () => {
+  const [currImageNum, setCurrImageNum] = useState(1);
+  const openImage = (imgURL) => {
     setOpened(true);
+    setCurrImageNum(imgURL);
   }
 
-  return (<>
-    <Layout album={'/images/pitt_explore/back.jpg'}>
+  const moveRight = () => {
+    if (currImageNum < images.length) {
+      setCurrImageNum(currImageNum + 1);
+    }
+  }
+
+  const moveLeft = () => {
+    if (currImageNum > 1) {
+      setCurrImageNum(currImageNum - 1);
+    }
+  }
+
+  useEffect(() => {
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        setOpened(false);
+      }
+      if (evt.keyCode == 37) {
+        moveLeft();
+      }
+      if (evt.keyCode == 39) {
+        moveRight();
+      }
+    };
+  }, [currImageNum]);
+
+  return (<div>
+    <Layout album={base_url + 'back.jpg'}>
       <Head>
-        <title>Abandoned Exploration</title>
+        <title>{title}</title>
       </Head>
       <div className={photoStyles.photojumbotext}>
-        <p className={photoStyles.photorealtext}>Abandoned Exploration</p> 
-        <p className={photoStyles.photosubtext}>August 2019</p>
+        <p className={photoStyles.photorealtext}>{title}</p> 
+        <p className={photoStyles.photosubtext}>{date}</p>
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
-      <p className={utilStyles.labelinfo}
-        style={{fontSize: 30, fontWeight: 500, marginTop: 20, lineHeight: 1.2, color: '#292930'}}>
+      <p className={photoStyles.albumhighlighttext}>
         After a quick reddit search of abandoned locations around Pittsburgh, I ended up here.
       </p>
-      <p className={utilStyles.labelinfo} style={{lineHeight: 1.5}}>
+      <p className={photoStyles.albumtext}>
         Not sketch at all.
       </p>
     </div>
     <div className={photoStyles.photoscontainer}>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/1.jpg"
-          className={photoStyles.photoreal}
-          onClick={openImage}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/2.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/3.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/4.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/5.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/6.jpg"
-          className={photoStyles.photoreal}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/7.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/pitt_explore/8.jpg"
-          className={photoStyles.photorealhalf}
-        />
-      </div>
+      {images.map((imagesize, i) => {
+        const imageNum = i + 1;
+        const imgURL = base_url + imageNum + '.jpg';
+        return <div className={photoStyles.photo} key={imageNum}>
+          <img src={imgURL} className={imagesize == 1 ? photoStyles.photoreal : photoStyles.photorealhalf} 
+            onClick={() => {openImage(imageNum)}}/>
+        </div>
+      })}
     </div>
-    <div style={opened ? {display: 'block'} : {display: 'none'}} className={photoStyles.overlay} onClick={() => setOpened(false)}>
-      <img src="/images/iceland_back.jpg" className={photoStyles.photofull}>
+    <div style={opened ? {display: 'block'} : {display: 'none'}} className={photoStyles.overlay}>
+      <img src={base_url + currImageNum + '.jpg'} 
+          className={photoStyles.photofull} 
+          onClick={() => setOpened(false)}>
       </img>
-      <a href="javascript:void(0)" className={photoStyles.closebtn} onClick={() => setOpened(false)}>&times;</a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.closebtn} 
+        onClick={() => setOpened(false)}>
+        &times;
+      </a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.rightarrow}
+        onClick={moveRight}>&#8250;</a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.leftarrow}
+        onClick={moveLeft}>&#8249;</a>
     </div>
-  </>)
+  </div>)
 }

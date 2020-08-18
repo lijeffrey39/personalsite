@@ -1,36 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
-import utilStyles from '../../styles/utils.module.css'
+
+const images = [2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2] // sizes;
+const title = 'Iceland'
+const date = 'March 2018'
+const base_url = '/images/iceland/';
 
 export default function Iceland() {
-
   const [opened, setOpened] = useState(false);
-  const openImage = () => {
+  const [currImageNum, setCurrImageNum] = useState(1);
+  const openImage = (imgURL) => {
     setOpened(true);
-    console.log("true")
+    setCurrImageNum(imgURL);
   }
 
-  return (<div style={opened ? {height: '100%', overflowY: 'hidden'} : {position: 'static'}}>
-    <Layout album={'/images/iceland_back.jpg'}>
+  const moveRight = () => {
+    if (currImageNum < images.length) {
+      setCurrImageNum(currImageNum + 1);
+    }
+  }
+
+  const moveLeft = () => {
+    if (currImageNum > 1) {
+      setCurrImageNum(currImageNum - 1);
+    }
+  }
+
+  useEffect(() => {
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        setOpened(false);
+      }
+      if (evt.keyCode == 37) {
+        moveLeft();
+      }
+      if (evt.keyCode == 39) {
+        moveRight();
+      }
+    };
+  }, [currImageNum]);
+
+  return (<div>
+    <Layout album={base_url + 'back.jpg'}>
       <Head>
-        <title>Iceland</title>
+        <title>{title}</title>
       </Head>
       <div className={photoStyles.photojumbotext}>
-        <p className={photoStyles.photorealtext}>Iceland</p> 
-        <p className={photoStyles.photosubtext}>March 2018</p>
+        <p className={photoStyles.photorealtext}>{title}</p> 
+        <p className={photoStyles.photosubtext}>{date}</p>
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
-      <p className={utilStyles.labelinfo}
-        style={{fontSize: 30, fontWeight: 500, marginTop: 20, lineHeight: 1.2, color: '#292930'}}>
+      <p className={photoStyles.albumhighlighttext}>
         This was my first time in Europe and first spring break trip outside the US.
       </p>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/_RWJC-YpHFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
-      <p className={utilStyles.labelinfo} style={{lineHeight: 1.5}}>
+      <p className={photoStyles.albumtext}>
         This trip happened back in my sophomore year of college when we found out that tickets
         to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
         For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
@@ -38,33 +67,31 @@ export default function Iceland() {
       </p>
     </div>
     <div className={photoStyles.photoscontainer}>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/iceland_back.jpg"
-          className={photoStyles.photoreal}
-          alt={'iceland'}
-          onClick={openImage}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/iceland_back.jpg"
-          className={photoStyles.photorealhalf}
-          alt={'iceland'}
-        />
-      </div>
-      <div className={photoStyles.photo}>
-        <img
-          src="/images/iceland_back.jpg"
-          className={photoStyles.photorealhalf}
-          alt={'iceland'}
-        />
-      </div>
+      {images.map((imagesize, i) => {
+        const imageNum = i + 1;
+        const imgURL = base_url + imageNum + '.jpg';
+        return <div className={photoStyles.photo} key={imageNum}>
+          <img src={imgURL} className={imagesize == 1 ? photoStyles.photoreal : photoStyles.photorealhalf} 
+            onClick={() => {openImage(imageNum)}}/>
+        </div>
+      })}
     </div>
-    <div style={opened ? {display: 'block'} : {display: 'none'}} className={photoStyles.overlay} onClick={() => setOpened(false)}>
-      <img src="/images/iceland_back.jpg" className={photoStyles.photofull}>
+    <div style={opened ? {display: 'block'} : {display: 'none'}} className={photoStyles.overlay}>
+      <img src={base_url + currImageNum + '.jpg'} 
+          className={photoStyles.photofull} 
+          onClick={() => setOpened(false)}>
       </img>
-      <a href="javascript:void(0)" className={photoStyles.closebtn} onClick={() => setOpened(false)}>&times;</a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.closebtn} 
+        onClick={() => setOpened(false)}>
+        &times;
+      </a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.rightarrow}
+        onClick={moveRight}>&#8250;</a>
+      <a href="javascript:void(0)" 
+        className={photoStyles.leftarrow}
+        onClick={moveLeft}>&#8249;</a>
     </div>
   </div>)
 }

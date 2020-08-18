@@ -3,12 +3,12 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 
-const images = [1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2] // sizes;
-const title = 'TEDx'
-const date = 'August 2019'
-const base_url = '/images/tedx/';
+const images = [2, 2, 1, 1, 2, 2, 2, 2, 2] // sizes;
+const title = 'NYC'
+const date = 'September 2018'
+const base_url = '/images/nyc2018/';
 
-export default function TEDx() {
+export default function NYC() {
   const [opened, setOpened] = useState(false);
   const [currImageNum, setCurrImageNum] = useState(1);
   const openImage = (imgURL) => {

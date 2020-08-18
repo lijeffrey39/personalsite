@@ -7,15 +7,15 @@
 
 .photo {
   display: inline-block;
-  margin: 20px;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   top: 0;
   left: 0;
   right: 0;
@@ -23,27 +23,51 @@
   background-color: rgba(0,0,0,1); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
-  top: 0; left: 0; right: 0; bottom: 0;
 }
 
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay a {
-  padding: 8px;
+.closebtn:hover {
+  color: #b1b1b1;
   text-decoration: none;
-  font-size: 36px;
-  color: #7b7b7b;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.rightarrow:hover {
+  color: #b1b1b1;
+  text-decoration: none;
+}
+
+.leftarrow:hover {
+  color: #b1b1b1;
+  text-decoration: none;
 }
 
 .closebtn {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 50px;
+  color: rgb(230, 230, 230);
+  display: block;
+  transition: 0.3s;
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: 10px;
+  right: 30px;
+}
+
+.rightarrow {
+  position: absolute;
+  top: 46vh;
+  right: 30px;
+  font-size: 50px;
+  transition: 0.3s;
+  color: rgb(230, 230, 230);
+}
+
+.leftarrow {
+  position: absolute;
+  top: 46vh;
+  left: 30px;
+  font-size: 50px;
+  transition: 0.3s;
+  color: rgb(230, 230, 230);
 }
 
 .photoreal {
@@ -54,15 +78,15 @@
 }
 
 .photofull {
-  height: 100%;
   width: auto;
+  height: 100%;
+  object-fit: contain;
   margin-left: auto;
   margin-right: auto;
 }
 
 .photorealhalf {
-  width: 400px;
-  /* height: auto; */
+  width: 410px;
   max-height: 600px;
   margin-bottom: 0px;
   cursor: pointer;
@@ -115,4 +139,19 @@
   max-width: 600px;
   padding: 50px;
   margin-top: -20px;
+}
+
+.albumhighlighttext {
+  font-size: 30px;
+  font-weight: 500px;
+  margin-top: 20px;
+  line-height: 1.2;
+  color: #292930;
+  font-family: 'DM Sans';
+}
+
+.albumtext {
+  line-height: 1.5;
+  color: #626262;
+  font-family: 'DM Sans';
 }

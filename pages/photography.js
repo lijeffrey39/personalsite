@@ -19,7 +19,7 @@ export default function Photography() {
         <div className={utilStyles.thumbnail}>
           <Link href="/photography/iceland">
             <img
-              src="/images/iceland_thumb.jpg"
+              src="/images/iceland/thumb.jpg"
               className={utilStyles.thumbnailreal}
               alt={'iceland'}
             />
@@ -58,14 +58,17 @@ export default function Photography() {
           </Link>
         </div>
         <div className={utilStyles.thumbnail}>
-          <img
-            src="/images/iceland_thumb.jpg"
-            className={utilStyles.thumbnailreal}
-            alt={'iceland'}
-          />
-          <p className={utilStyles.thumbnailname}>
-            Iceland <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
-          </p>
+          <Link href="/photography/nyc">
+            <img
+              src="/images/nyc2018/thumb.jpg"
+              className={utilStyles.thumbnailreal}
+            />
+          </Link>
+          <Link href="/photography/nyc">
+            <p className={utilStyles.thumbnailname}>
+              NYC <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
+            </p>
+          </Link>
         </div>
         <div className={utilStyles.thumbnail}>
           <img
