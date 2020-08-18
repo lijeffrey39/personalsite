@@ -1,3 +1,75 @@
+.photoscontainer {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.photo {
+  display: inline-block;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,1); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #7b7b7b;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.photoreal {
+  width: 840px;
+  height: auto;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.photofull {
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photorealhalf {
+  width: 400px;
+  /* height: auto; */
+  max-height: 600px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+
 .photojumbotext {
   text-align: center;
   margin-top: 0px;
@@ -6,6 +78,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  line-height: 1;
 }
 
 .photorealtext {
@@ -24,7 +98,7 @@
   font-family: 'DM Sans';
   text-align: center;
   color: white;
-  margin-top: -20px;
+  margin-top: 10px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }

@@ -24,28 +24,38 @@ export default function Photography() {
               alt={'iceland'}
             />
           </Link>
-          <p className={utilStyles.thumbnailname}>
-            Iceland <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
-          </p>
+          <Link href="/photography/iceland">
+            <p className={utilStyles.thumbnailname}>
+              Iceland <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
+            </p>
+          </Link>
         </div>
         <div className={utilStyles.thumbnail}>
-          <img
-            src="/images/iceland_thumb.jpg"
-            className={utilStyles.thumbnailreal}
-            alt={'iceland'}
-          />
-          <p className={utilStyles.thumbnailname}>
-            Iceland <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
-          </p>
+          <Link href="/photography/pittexplore">
+            <img
+              src="/images/pitt_explore/thumb.jpg"
+              className={utilStyles.thumbnailreal}
+              alt={'pitt'}
+            />
+          </Link>
+          <Link href="/photography/pittexplore">
+            <p className={utilStyles.thumbnailname}>
+              Abandoned Exploration <font style={{fontWeight: 400, color: '#606060'}}>2019</font>
+            </p>
+          </Link>
         </div><div className={utilStyles.thumbnail}>
-          <img
-            src="/images/iceland_thumb.jpg"
-            className={utilStyles.thumbnailreal}
-            alt={'iceland'}
-          />
-          <p className={utilStyles.thumbnailname}>
-            Iceland <font style={{fontWeight: 400, color: '#606060'}}>2018</font>
-          </p>
+          <Link href="/photography/tedx">
+            <img
+              src="/images/tedx/thumb.jpg"
+              className={utilStyles.thumbnailreal}
+              alt={'iceland'}
+            />
+          </Link>
+          <Link href="/photography/tedx">
+            <p className={utilStyles.thumbnailname}>
+              TEDx <font style={{fontWeight: 400, color: '#606060'}}>2019</font>
+            </p>
+          </Link>
         </div>
         <div className={utilStyles.thumbnail}>
           <img
