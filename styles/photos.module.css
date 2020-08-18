@@ -1,11 +1,32 @@
 .photojumbotext {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photorealtext {
   font-size: 60px;
   font-weight: bold;
   font-family: 'DM Sans';
   text-align: center;
   color: white;
-  padding-bottom: 150px;
-  padding-top: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.photosubtext {
+  font-size: 22px;
+  font-family: 'DM Sans';
+  text-align: center;
+  color: white;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 @media (max-width: 500px) {
@@ -14,8 +35,10 @@
   }
 }
 
-
-.photosjumbotron {
+.phototext {
   margin-left: auto;
   margin-right: auto;
+  max-width: 600px;
+  padding: 50px;
+  margin-top: -20px;
 }

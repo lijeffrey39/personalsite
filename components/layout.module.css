@@ -6,9 +6,11 @@
 
 .photojumbobackground {
   background-repeat: no-repeat;
-  background-size: 50px 200px;
   background-position: center;
   background-size: cover;
+  height: 80vh;
+  align-items: center;
+  position: relative;
 }
 
 @media (max-width: 500px) {
@@ -39,7 +41,7 @@
   cursor: pointer;
   color: #292930;
   font-family: 'DM Sans';
-  font-weight: bold;
+  font-weight: 100;
   font-size: 30px;
 }
 

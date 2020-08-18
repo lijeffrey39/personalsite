@@ -26,7 +26,7 @@ export default function Home() {
           <p className={utilStyles.labelinfo}>
             I graduated from Carnegie Mellon University in May 2020 with a Bachelors in 
             Electrical and Computer Engineering. I’ve always had an interest in anything 
-            computer related, but have recently been intrigued by the interestection of 
+            computer related, but have recently been intrigued by the intersection of 
             technology and design. If I’m not behind a computer screen, you can probably 
             find me traveling, taking pictures, or making music.
           </p>

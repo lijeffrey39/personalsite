@@ -4,16 +4,17 @@ import styles from './layout.module.css'
 import Link from 'next/link'
 import Fonts from '../Fonts'
 
-const name = 'Your Name'
 export const siteTitle = 'Jeffrey Li'
 
 export default function Layout({ children, home, photography, album }) {
+  const backgroundURL = `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) ), url('` + album + `')`;
   useEffect(() => {
-    Fonts()
+    Fonts();
   }, []);
 
   return (
-    <div className={album ? styles.photojumbobackground : {}} style={album ? {backgroundImage: album} : {}}>
+    <div className={album ? styles.photojumbobackground : {}} 
+        style={album ? {backgroundImage: backgroundURL} : {}}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -32,17 +33,17 @@ export default function Layout({ children, home, photography, album }) {
       {photography || album ? (
         <div className={styles.navbar}>
           <Link href="/">
-            <p className={styles.brand}>
-              Jeffrey <font style={{fontWeight: 400, color: '#606060'}}>Li</font>
+            <p className={styles.brand} style={album ? {color: 'white'} : {}}>
+              Jeffrey <font style={album ? {color: 'white', fontWeight: 900} : {color: '#606060', fontWeight: 400}}>Li</font>
             </p>
           </Link>
           <Link href="/projects">
-            <p className={styles.navlink}>
+            <p className={styles.navlink} style={album ? {color: 'white'} : {}}>
               projects
             </p>
           </Link>
           <Link href="/travel">
-            <p className={styles.navlink} style={{marginRight: 0}}>
+            <p className={styles.navlink} style={album ? {color: 'white', marginRight: 0} : {marginRight: 0}}>
               travel
             </p>
           </Link>
