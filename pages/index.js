@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-import Fonts from '../Fonts'
 
 export default function Home() {
-  useEffect(() => {
-    Fonts()
-  }, []);
-
   return (
     <Layout home>
       <Head>
@@ -26,7 +20,7 @@ export default function Home() {
         </div>
         <div className={utilStyles.labelregion}>
           <p className={utilStyles.labelinfo}
-            style={{fontSize: 30, fontWeight: 700, marginTop: 18, lineHeight: 1, color: '#292930'}}>
+            style={{fontSize: 26, fontWeight: 700, marginTop: 18, lineHeight: 1, color: '#292930'}}>
             I’m a software engineer at <a style={{color: '#F43329'}} href='http://getcruise.com'>Cruise</a> working on self driving cars 🚗
           </p>
           <p className={utilStyles.labelinfo}>

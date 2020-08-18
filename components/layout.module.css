@@ -1,22 +1,23 @@
-.container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
-}
-
 .navbar {
-  margin-top: 3rem;
+  padding-top: 3rem;
   margin-right: 8%;
   text-align: right;
 }
 
+.photojumbobackground {
+  background-repeat: no-repeat;
+  background-size: 50px 200px;
+  background-position: center;
+  background-size: cover;
+}
+
 @media (max-width: 500px) {
   .navbar {
-    margin-top: 3rem;
-    /* margin: auto; */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin-right: 0%;
+  }
+
+  .navlink {
+    margin-right: 25px !important;
   }
 }
 
@@ -28,6 +29,18 @@
   font-family: 'Poppins';
   font-weight: 500;
   font-size: 16px;
+}
+
+.brand {
+  display: inline;
+  margin-left: 8%;
+  float: left;
+  margin-top: -8px;
+  cursor: pointer;
+  color: #292930;
+  font-family: 'DM Sans';
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .navlink:hover {
