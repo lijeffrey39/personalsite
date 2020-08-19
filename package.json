@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
     "next": "9.3.5",
     "next-fonts": "^1.4.0",
+    "next-optimized-images": "^2.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }

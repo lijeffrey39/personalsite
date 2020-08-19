@@ -46,12 +46,17 @@ export default function Layout({ children, home, photography, album, projects, p
     } else {
       return (
         <div className={styles.navbar}>
-          {!home ? (
+          {home ? <></> : (
             <Link href="/">
-              <p className={styles.brand}>
-                Jeffrey <font style={{fontWeight: 900}}>Li</font>
-              </p>
-            </Link>) : <></>}
+              <div>
+                <p className={styles.brand}>
+                  Jeffrey <font style={{fontWeight: 900}}>Li</font>
+                </p>
+                <p className={styles.brandmobile}>
+                  J L
+                </p>
+              </div>
+            </Link>)}
           <Link href="/projects">
             <p className={styles.navlink}>
               projects

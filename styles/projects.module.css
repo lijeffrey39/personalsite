@@ -65,17 +65,17 @@
   display: inline;
   float: left;
   position: absolute;
-  top: 55%;
-  left: 40%;
+  top: 60%;
+  left: 30%;
   transform: translate(-25%, -50%);
-  width: 100%;
+  /* width: 100%; */
   line-height: 1.4;
 }
 
 @media (max-width: 700px) {
   .jumboinline {
     max-width: 350px;
-    left: 35%;
+    left: 25%;
   }
 }
 
@@ -83,6 +83,14 @@
   .jumboinline {
     max-width: 300px;
     left: 28%;
+  }
+
+  .projectsubjumbotext {
+    font-size: 20px !important;
+  }
+
+  .projectjumbotext {
+    font-size: 55px !important;
   }
 }
 
@@ -109,3 +117,16 @@
   font-size: 22px;
   color: #7F7F7F;
 }
+
+.projectlink {
+  font-family: 'DM Sans';
+  max-width: 500px;
+  font-size: 18px;
+  color: #2b60ff;
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+
+/* .projectlink:hover {
+  text-decoration: underline;
+} */

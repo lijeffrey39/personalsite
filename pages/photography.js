@@ -40,6 +40,12 @@ const locations = [
     'folder': 'nyc2018',
     'url': '/photography/nyc'
   },
+  {
+    'name': 'Greek Sing',
+    'year': '2018',
+    'folder': 'greeksing',
+    'url': '/photography/greeksing'
+  },
 ]
 
 export default function Photography() {

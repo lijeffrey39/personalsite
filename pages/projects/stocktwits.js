@@ -16,14 +16,21 @@ export default function Stocktwits() {
         <div className={projectStyles.jumboinline}>
           <p className={projectStyles.projectjumbotext}>{title}</p>
           <p className={projectStyles.projectsubjumbotext}>
-            Leverage the vast amount of user data stocktwits has to offer for predicting next-day stock movement.
+            Leveraging the user data stocktwits has to offer for predicting next-day stock movement.
           </p>
+          <a className={projectStyles.projectlink} style={{marginTop: 0}} href='https://github.com/lijeffrey39/stockAnalysis'>
+            Github
+          </a><br/>
+          <a className={projectStyles.projectlink} href='https://lijeffrey39.gitbook.io/sentiment-ai/'>
+            Documentation
+          </a>
         </div>
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
       <p className={photoStyles.albumhighlighttext}>
-        This was my first time in Europe and first spring break trip outside the US.
+        Have you ever wondered what stock to buy today? With so much news and information on the internet, who's telling the truth?
+        Why was there no easy way to compile this data into someting useful.
       </p>
       <p className={photoStyles.albumtext}>
         This trip happened back in my sophomore year of college when we found out that tickets
