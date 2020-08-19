@@ -5,11 +5,20 @@
     margin-top: 23px;
     margin-left: -10px;
   }
+
   .label {
-    width: 5px;
+    width: 10px !important;
   }
   .jumbotrontext {
     font-size: 50px !important;
+  }
+
+  .resumelabel {
+    display: none !important;
+  }
+
+  .resumelabelmobile {
+    display: block !important;
   }
 }
 
@@ -44,9 +53,11 @@
 .thumbnailname {
   font-family: 'DM Sans';
   color: #292930;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 10px;
+  margin-left: 22px;
   cursor: pointer;
+  text-align: left;
 }
 
 .label {
@@ -69,6 +80,23 @@
 .labelinfo {
   color: #626262;
   font-family: 'DM Sans';
+}
+
+
+.resumelabel {
+  color: #626262;
+  font-family: 'DM Sans';
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.resumelabelmobile {
+  color: #626262;
+  font-family: 'DM Sans';
+  text-decoration: underline;
+  cursor: pointer;
+  display: none;
+  margin-top: 18px;
 }
 
 .subjumbotrontext {

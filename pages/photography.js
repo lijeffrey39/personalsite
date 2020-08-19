@@ -69,7 +69,7 @@ export default function Photography() {
               </Link>
               <Link href={location.url}>
                 <p className={utilStyles.thumbnailname}>
-                  {location.name} <font style={{fontWeight: 400, color: '#606060'}}>{location.year}</font>
+                  {location.name} <font style={{fontWeight: 400, color: '#606060'}}> | {location.year}</font>
                 </p>
               </Link>
             </div>

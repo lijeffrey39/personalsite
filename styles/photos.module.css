@@ -143,9 +143,10 @@
 }
 
 .albumhighlighttext {
-  font-size: 30px;
-  font-weight: 500px;
-  margin-top: 20px;
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 50px;
   line-height: 1.2;
   color: #292930;
   font-family: 'DM Sans';
