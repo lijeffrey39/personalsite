@@ -1,7 +1,7 @@
 .projectcontainer {
   margin-right: 5%;
   margin-left: 5%;
-  margin-top: 130px;
+  margin-top: 55px;
   text-align: center;
 }
 
@@ -12,7 +12,7 @@
 
 .projectbackground {
   background-color: #FFF0F0;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
   padding: 40px;
   padding-bottom: 0px;
   padding-top: 30px;
@@ -63,15 +63,21 @@
 
 .jumboinline {
   display: inline;
-  max-width: 300px;
+  max-width: 500px;
   float: left;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  transform: translate(-25%, -50%);
+  width: 100%;
+  line-height: 1.4;
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 550px) {
   .jumboinline {
-    margin-top: 100px;
+    max-width: 300px;
   }
-} */
+}
 
 
 .projectjumbo {
@@ -83,14 +89,13 @@
 .projectjumbotext {
   font-size: 65px;
   font-weight: bold;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   margin-top: 0px;
   font-family: 'DM Sans';
 }
 
 .projectsubjumbotext {
   font-family: 'Poppins';
-  margin-top: 0px;
   font-size: 22px;
   color: #7F7F7F;
 }

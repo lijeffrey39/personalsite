@@ -39,7 +39,7 @@ export default function Layout({ children, home, photography, album, projects, p
           {!home ? (
             <Link href="/">
               <p className={styles.brand}>
-                Jeffrey <font style={{fontWeight: 400, color: '#606060'}}>Li</font>
+                Jeffrey <font style={{fontWeight: 900}}>Li</font>
               </p>
             </Link>) : <></>}
           <Link href="/projects">

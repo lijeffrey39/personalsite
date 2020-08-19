@@ -16,7 +16,9 @@ export default function Covaid() {
       <div className={projectStyles.projectjumbo}>
         <div className={projectStyles.jumboinline}>
           <p className={projectStyles.projectjumbotext}>Covaid</p>
-          <p className={projectStyles.projectsubjumbotext} style={{marginTop: -10, maxWidth: 350}}>Built with React.js, Node.js, MongoDB</p>
+          <p className={projectStyles.projectsubjumbotext} style={{marginTop: -10, maxWidth: 500}}>
+           A mutual aid platform that connects community volunteers with those who need support.
+          </p>
         </div>
         {/* <img src={"/images/projects/covaid.png"} className={projectStyles.jumboimage} /> */}
       </div>

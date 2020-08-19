@@ -38,7 +38,7 @@ export default function Photography() {
       </Head>
       <div className={utilStyles.jumbotron}>
         <p className={utilStyles.jumbotrontext}>Photography</p>
-        <p className={utilStyles.subjumbotrontext} style={{marginTop: -5}}>a collection of stories</p>
+        <p className={utilStyles.subjumbotrontext} style={{marginTop: -12}}>a collection of stories</p>
       </div>
 
       <div className={utilStyles.thumbnailcontainer}>

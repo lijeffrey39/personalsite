@@ -13,7 +13,7 @@ export default function Projects() {
       </Head>
       <div className={utilStyles.jumbotron}>
         <p className={utilStyles.jumbotrontext}>Projects</p>
-        <p className={utilStyles.subjumbotrontext}>random things I’ve worked on</p>
+        <p className={utilStyles.subjumbotrontext} style={{marginTop: -12}}>random things I’ve worked on</p>
       </div>
       <div className={projectStyles.projectcontainer}>
         <div className={projectStyles.project}>
