@@ -5,11 +5,23 @@ import utilStyles from '../styles/utils.module.css'
 
 const locations = [
   {
+    'name': 'Japan',
+    'year': '2020',
+    'folder': 'japan',
+    'url': '/photography/japan'
+  },
+  {
     'name': 'Iceland',
     'year': '2018',
     'folder': 'iceland',
     'url': '/photography/iceland'
-  }, 
+  },
+  {
+    'name': 'Cherry Blossoms',
+    'year': '2019',
+    'folder': 'cherryblossoms',
+    'url': '/photography/cherryblossoms'
+  },
   {
     'name': 'Abandoned Exploration',
     'year': '2019',

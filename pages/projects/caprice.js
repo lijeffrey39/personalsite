@@ -4,19 +4,19 @@ import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 import projectStyles from '../../styles/projects.module.css'
 
-const title = 'Covaid'
+const title = 'Caprice'
 
-export default function Covaid() {
+export default function Caprice() {
   return (<>
-    <Layout projectcolor={'#FFEFEF'}>
+    <Layout projectcolor={'#ffe5ae'}>
       <Head>
         <title>{title}</title>
       </Head>
       <div className={projectStyles.projectjumbo}>
         <div className={projectStyles.jumboinline}>
-          <p className={projectStyles.projectjumbotext}>Covaid</p>
+          <p className={projectStyles.projectjumbotext}>{title}</p>
           <p className={projectStyles.projectsubjumbotext}>
-           A mutual aid platform that connects community volunteers with those who need support.
+            A three-part motion controlled synthesizer comprised of a smartphone, laptop, and VR controller.
           </p>
         </div>
       </div>

@@ -17,13 +17,23 @@ export default function Layout({ children, home, photography, album, projects, p
       return (
         <div className={styles.navbar}>
           <Link href="/">
-            <p className={styles.brand} style={{color: 'white'}}>
-              Jeffrey <font style={{color: 'white', fontWeight: 900}}>Li</font>
-            </p>
+            <div>
+              <p className={styles.brand} style={{color: 'white'}}>
+                Jeffrey <font style={{color: 'white', fontWeight: 900}}>Li</font>
+              </p>
+              <p className={styles.brandmobile} style={{color: 'white'}}>
+                J L
+              </p>
+            </div>
           </Link>
           <Link href="/projects">
             <p className={styles.navlink} style={{color: 'white'}}>
               projects
+            </p>
+          </Link>
+          <Link href="/photography">
+            <p className={styles.navlink} style={{color: 'white'}}>
+              photos
             </p>
           </Link>
           <Link href="/travel">
@@ -43,13 +53,13 @@ export default function Layout({ children, home, photography, album, projects, p
               </p>
             </Link>) : <></>}
           <Link href="/projects">
-            <p className={styles.navlink} style={projects || projectcolor ? {display: 'none'} : {display: 'inline'}}>
+            <p className={styles.navlink}>
               projects
             </p>
           </Link>
           <Link href="/photography">
-            <p className={styles.navlink} style={photography ? {display: 'none'} : {display: 'inline'}}>
-              photography
+            <p className={styles.navlink}>
+              photos
             </p>
           </Link>
           <Link href="/travel">
