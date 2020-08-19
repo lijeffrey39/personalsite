@@ -1,0 +1,96 @@
+.projectcontainer {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 130px;
+  text-align: center;
+}
+
+.project {
+  display: inline-block;
+  margin: 25px;
+}
+
+.projectbackground {
+  background-color: #FFF0F0;
+  border-radius: 3px 3px 0px 0px;
+  padding: 40px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+  cursor: pointer;
+}
+
+.projectimage {
+  width: 400px;
+  max-height: 300px;
+  margin-bottom: 0px;
+  object-fit: cover;
+}
+
+.projectbackground:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=30);
+  transition: 0.3s;
+}
+
+.projectname {
+  font-family: 'DM Sans';
+  color: #292930;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  max-width: 400px;
+}
+
+.projectdesc {
+  font-family: 'DM Sans';
+  color: #828282;
+  margin-top: 5px;
+  text-align: left;
+  max-width: 400px;
+  line-height: 1.3;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.jumboimage {
+  display: inline;
+  max-width: 400px;
+  float: right;
+  margin-right: 100px;
+}
+
+.jumboinline {
+  display: inline;
+  max-width: 300px;
+  float: left;
+}
+
+/* @media (max-width: 500px) {
+  .jumboinline {
+    margin-top: 100px;
+  }
+} */
+
+
+.projectjumbo {
+  margin-left: 10%;
+  margin-top: 5rem;
+  padding-right: 30px;
+}
+
+.projectjumbotext {
+  font-size: 65px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: 'DM Sans';
+}
+
+.projectsubjumbotext {
+  font-family: 'Poppins';
+  margin-top: 0px;
+  font-size: 22px;
+  color: #7F7F7F;
+}

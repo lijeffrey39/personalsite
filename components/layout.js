@@ -6,15 +6,74 @@ import Fonts from '../Fonts'
 
 export const siteTitle = 'Jeffrey Li'
 
-export default function Layout({ children, home, photography, album }) {
+export default function Layout({ children, home, photography, album, projects, projectcolor }) {
   const backgroundURL = `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) ), url('` + album + `')`;
   useEffect(() => {
     Fonts();
   }, []);
 
+  const currNavbar = () => {
+    if (album) {
+      return (
+        <div className={styles.navbar}>
+          <Link href="/">
+            <p className={styles.brand} style={{color: 'white'}}>
+              Jeffrey <font style={{color: 'white', fontWeight: 900}}>Li</font>
+            </p>
+          </Link>
+          <Link href="/projects">
+            <p className={styles.navlink} style={{color: 'white'}}>
+              projects
+            </p>
+          </Link>
+          <Link href="/travel">
+            <p className={styles.navlink} style={{color: 'white', marginRight: 0}}>
+              travel
+            </p>
+          </Link>
+        </div>
+      )
+    } else {
+      return (
+        <div className={styles.navbar}>
+          {!home ? (
+            <Link href="/">
+              <p className={styles.brand}>
+                Jeffrey <font style={{fontWeight: 400, color: '#606060'}}>Li</font>
+              </p>
+            </Link>) : <></>}
+          <Link href="/projects">
+            <p className={styles.navlink} style={projects || projectcolor ? {display: 'none'} : {display: 'inline'}}>
+              projects
+            </p>
+          </Link>
+          <Link href="/photography">
+            <p className={styles.navlink} style={photography ? {display: 'none'} : {display: 'inline'}}>
+              photography
+            </p>
+          </Link>
+          <Link href="/travel">
+            <p className={styles.navlink} style={{marginRight: 0}}>
+              travel
+            </p>
+          </Link>
+        </div>
+      )
+    }
+  }
+
+  const backgroundStyle = () => {
+    if (album) {
+      return {backgroundImage: backgroundURL}
+    } else if (projectcolor) {
+      return {backgroundColor: projectcolor}
+    } else {
+      return {}
+    }
+  }
+
   return (
-    <div className={album ? styles.photojumbobackground : {}} 
-        style={album ? {backgroundImage: backgroundURL} : {}}>
+    <div className={album || projectcolor ? styles.photojumbobackground : {}} style={backgroundStyle()}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -30,56 +89,8 @@ export default function Layout({ children, home, photography, album }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {photography || album ? (
-        <div className={styles.navbar}>
-          <Link href="/">
-            <p className={styles.brand} style={album ? {color: 'white'} : {}}>
-              Jeffrey <font style={album ? {color: 'white', fontWeight: 900} : {color: '#606060', fontWeight: 400}}>Li</font>
-            </p>
-          </Link>
-          <Link href="/projects">
-            <p className={styles.navlink} style={album ? {color: 'white'} : {}}>
-              projects
-            </p>
-          </Link>
-          <Link href="/travel">
-            <p className={styles.navlink} style={album ? {color: 'white', marginRight: 0} : {marginRight: 0}}>
-              travel
-            </p>
-          </Link>
-        </div>
-      ) : 
-      <div className={styles.navbar}>
-        {!home ? (
-          <Link href="/">
-            <p className={styles.brand}>
-              Jeffrey <font style={{fontWeight: 400, color: '#606060'}}>Li</font>
-            </p>
-          </Link>) : <></>}
-        <Link href="/projects">
-          <p className={styles.navlink}>
-            projects
-          </p>
-        </Link>
-        <Link href="/photography">
-          <p className={styles.navlink}>
-            photography
-          </p>
-        </Link>
-        <Link href="/travel">
-          <p className={styles.navlink} style={{marginRight: 0}}>
-            travel
-          </p>
-        </Link>
-      </div>}
+      {currNavbar()}
       <main>{children}</main>
-      {/* {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )} */}
     </div>
   )
 }

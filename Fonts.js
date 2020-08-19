@@ -2,7 +2,7 @@ const FontFaceObserver = require('fontfaceobserver')
 
 const Fonts = () => {
   const link = document.createElement('link')
-  link.href = 'https://fonts.googleapis.com/css?family=DM+Sans:300,400,500,700,900'
+  link.href = 'https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,500,700,900'
   link.rel = 'stylesheet'
 
   document.head.appendChild(link)
