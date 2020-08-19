@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 import projectStyles from '../../styles/projects.module.css'
+import ProgressBar from "react-scroll-progress-bar"; 
 
 const title = 'Stock Sentiment Analysis'
 
@@ -12,6 +13,11 @@ export default function Stocktwits() {
       <Head>
         <title>{title}</title>
       </Head>
+      <ProgressBar
+        // height="8"
+        // bgcolor="#F43059"
+        // duration="1"
+      />
       <div className={projectStyles.projectjumbo}>
         <div className={projectStyles.jumboinline}>
           <p className={projectStyles.projectjumbotext}>{title}</p>
