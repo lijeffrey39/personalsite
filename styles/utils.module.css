@@ -1,11 +1,26 @@
+@media (max-width: 500px) {
+  .labeltext {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: 23px;
+    margin-left: -10px;
+  }
+  .label {
+    width: 5px;
+  }
+  .jumbotrontext {
+    font-size: 50px !important;
+  }
+}
+
 .thumbnail {
   display: inline-block;
 }
 
 .thumbnailreal {
-  width: 15rem;
-  height: 15rem;
-  margin: 30px;
+  width: 16rem;
+  height: 16rem;
+  margin: 20px;
   margin-top: 15px;
   border-radius: 8px;
   /* box-shadow:0 5px 20px 0 rgba(0,0,0,0.15),0 6px 20px 0 rgba(0,0,0,0.15) !important; */
@@ -38,21 +53,6 @@
   width: 70px;
   text-align: right;
   float:left;
-}
-
-@media (max-width: 500px) {
-  .labeltext {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin-top: 23px;
-    margin-left: -10px;
-  }
-  .label {
-    width: 5px;
-  }
-  .jumbotrontext {
-    font-size: 50px !important;
-  }
 }
 
 .labelregion {
