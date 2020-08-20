@@ -23,6 +23,12 @@ const locations = [
     'url': '/photography/cherryblossoms'
   },
   {
+    'name': 'DS: Trout',
+    'year': '2019',
+    'folder': 'dstrout',
+    'url': '/photography/dstrout'
+  },
+  {
     'name': 'Abandoned Exploration',
     'year': '2019',
     'folder': 'pitt_explore',
@@ -51,6 +57,12 @@ const locations = [
     'year': '2018',
     'folder': 'greeksing',
     'url': '/photography/greeksing'
+  },
+  {
+    'name': 'Lunar Gala: Sonder',
+    'year': '2017',
+    'folder': 'lgsonder',
+    'url': '/photography/lgsonder'
   }
 ]
 

@@ -52,10 +52,10 @@ export default function Home() {
           </p>
         </div>
         <div className={utilStyles.labelregion} style={{paddingTop: 18}}>
-          <a className={utilStyles.resumelabel} href='/vercel.svg' download>
+          <a className={utilStyles.resumelabel} href='/jeffrey_li.pdf' download>
             jeffreyli_resume.pdf
           </a>
-          <a className={utilStyles.resumelabelmobile} href='/vercel.svg' download>
+          <a className={utilStyles.resumelabelmobile} href='/jeffrey_li.pdf' download>
             jeffreyli_resume.pdf
           </a>
         </div>
