@@ -27,6 +27,12 @@ const locations = [
     'year': '2019',
     'folder': 'pitt_explore',
     'url': '/photography/pittexplore'
+  },
+  {
+    'name': 'Bye John Kim',
+    'year': '2020',
+    'folder': 'byejohn',
+    'url': '/photography/byejohn'
   }, 
   {
     'name': 'TEDx',
@@ -45,7 +51,7 @@ const locations = [
     'year': '2018',
     'folder': 'greeksing',
     'url': '/photography/greeksing'
-  },
+  }
 ]
 
 export default function Photography() {
