@@ -13,11 +13,7 @@ export default function Stocktwits() {
       <Head>
         <title>{title}</title>
       </Head>
-      <ProgressBar
-        // height="8"
-        // bgcolor="#F43059"
-        // duration="1"
-      />
+      <ProgressBar/>
       <div className={projectStyles.projectjumbo}>
         <div className={projectStyles.jumboinline}>
           <p className={projectStyles.projectjumbotext}>{title}</p>

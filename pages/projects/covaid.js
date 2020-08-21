@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 import projectStyles from '../../styles/projects.module.css'
+import ProgressBar from "react-scroll-progress-bar"; 
 
 const title = 'Covaid'
 
@@ -12,12 +13,19 @@ export default function Covaid() {
       <Head>
         <title>{title}</title>
       </Head>
+      <ProgressBar/>
       <div className={projectStyles.projectjumbo}>
         <div className={projectStyles.jumboinline}>
-          <p className={projectStyles.projectjumbotext}>Covaid</p>
+          <p className={projectStyles.projectjumbotext}>{title}</p>
           <p className={projectStyles.projectsubjumbotext}>
-           A mutual aid platform that connects community volunteers with those who need support.
+            A mutual aid platform that connects community volunteers with those who need support.
           </p>
+          <a className={projectStyles.projectlink} style={{marginTop: 0}} href='https://github.com/Covaid-co'>
+            Github
+          </a><br/>
+          <a className={projectStyles.projectlink} style={{marginTop: 0}} href='https://covaid.co'>
+            Live Site
+          </a>
         </div>
       </div>
     </Layout>
