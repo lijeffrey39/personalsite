@@ -11,6 +11,18 @@ const locations = [
     'url': '/photography/japan'
   },
   {
+    'name': 'Big Sur',
+    'year': '2019',
+    'folder': 'bigsur',
+    'url': '/photography/bigsur'
+  },
+  {
+    'name': 'Shenandoah',
+    'year': '2020',
+    'folder': 'shenandoah',
+    'url': '/photography/shenandoah'
+  },
+  {
     'name': 'Iceland',
     'year': '2018',
     'folder': 'iceland',
@@ -21,6 +33,12 @@ const locations = [
     'year': '2019',
     'folder': 'cherryblossoms',
     'url': '/photography/cherryblossoms'
+  },
+  {
+    'name': 'Lunar Gala: Ferox',
+    'year': '2018',
+    'folder': 'lgferox',
+    'url': '/photography/lgferox'
   },
   {
     'name': 'DS: Trout',
@@ -51,6 +69,12 @@ const locations = [
     'year': '2018',
     'folder': 'nyc2018',
     'url': '/photography/nyc'
+  },
+  {
+    'name': 'NYC',
+    'year': '2017',
+    'folder': 'nyc2017',
+    'url': '/photography/nyc2017'
   },
   {
     'name': 'Greek Sing',
