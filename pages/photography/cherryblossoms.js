@@ -54,7 +54,7 @@ export default function CherryBlossoms() {
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
-      <p className={photoStyles.albumhighlighttext}>
+      {/* <p className={photoStyles.albumhighlighttext}>
         This was my first time in Europe and first spring break trip outside the US.
       </p>
       <iframe width="100%" height="315" src="https://www.youtube.com/embed/_RWJC-YpHFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -64,7 +64,7 @@ export default function CherryBlossoms() {
         to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
         For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
         Neistat at the time and happened to create a vlog of the trip.
-      </p>
+      </p> */}
     </div>
     <div className={photoStyles.photoscontainer}>
       {images.map((imagesize, i) => {

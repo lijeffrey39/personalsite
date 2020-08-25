@@ -17,6 +17,12 @@ const locations = [
     'url': '/photography/bigsur'
   },
   {
+    'name': 'Italy and Spain',
+    'year': '2019',
+    'folder': 'italyspain',
+    'url': '/photography/italyspain'
+  },
+  {
     'name': 'Shenandoah',
     'year': '2020',
     'folder': 'shenandoah',

@@ -34,12 +34,12 @@ export default function Stocktwits() {
         Have you ever wondered what stock to buy today? With so much news and information on the internet, who's telling the truth?
         Why was there no easy way to compile this data into someting useful.
       </p>
-      <p className={photoStyles.albumtext}>
+      {/* <p className={photoStyles.albumtext}>
         This trip happened back in my sophomore year of college when we found out that tickets
         to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
         For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
         Neistat at the time and happened to create a vlog of the trip.
-      </p>
+      </p> */}
     </div>
   </>)
 }

@@ -3,12 +3,12 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 
-const images = [1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2] // sizes;
-const title = 'TEDx'
-const date = 'August 2019'
-const base_url = '/images/tedx/';
+const images = [1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1] // sizes;
+const title = 'Italy and Spain'
+const date = 'March 2019'
+const base_url = '/images/italyspain/';
 
-export default function TEDx() {
+export default function Italyspain() {
   const [opened, setOpened] = useState(false);
   const [currImageNum, setCurrImageNum] = useState(1);
   const openImage = (imgURL) => {
@@ -55,10 +55,15 @@ export default function TEDx() {
     </Layout>
     <div className={photoStyles.phototext}>
       {/* <p className={photoStyles.albumhighlighttext}>
-        After a quick reddit search of abandoned locations around Pittsburgh, I ended up here.
+        This was my first time in Europe and first spring break trip outside the US.
       </p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/_RWJC-YpHFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
       <p className={photoStyles.albumtext}>
-        Not sketch at all.
+        This trip happened back in my sophomore year of college when we found out that tickets
+        to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
+        For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
+        Neistat at the time and happened to create a vlog of the trip.
       </p> */}
     </div>
     <div className={photoStyles.photoscontainer}>

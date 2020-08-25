@@ -54,12 +54,12 @@ export default function NYC() {
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
-      <p className={photoStyles.albumhighlighttext}>
+      {/* <p className={photoStyles.albumhighlighttext}>
         After a quick reddit search of abandoned locations around Pittsburgh, I ended up here.
       </p>
       <p className={photoStyles.albumtext}>
         Not sketch at all.
-      </p>
+      </p> */}
     </div>
     <div className={photoStyles.photoscontainer}>
       {images.map((imagesize, i) => {
