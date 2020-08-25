@@ -31,14 +31,45 @@ export default function Covaid() {
     </Layout>
     <div className={photoStyles.phototext}>
       <p className={photoStyles.albumhighlighttext}>
-        This was my first time in Europe and first spring break trip outside the US.
+        While stuck in quarentine during the COVID-19 pandemic, my friend and I decided to
+        work on something to help others in need. 
       </p>
       <p className={photoStyles.albumtext}>
-        This trip happened back in my sophomore year of college when we found out that tickets
-        to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
-        For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
-        Neistat at the time and happened to create a vlog of the trip.
+        The idea first started when we saw mutual aid groups around us 
+        appear in response to the pandemic; I had no idea what 
+        mutual aid even was or what it meant. After some more research, we learned that these
+        groups were voluntarily organized by local communities aimed at helping and caring for those in need. 
+        These efforts were immensely inspiring, seeing how our local communities were stepping up to help 
+        one another during these difficult times. We began to look further into this concept and 
+        found that many cities had also formed mutual aid groups, many with hundreds of volunteers ready to help 
+        elderly and immunocompromised people. However, we noticed these organizations utilized 
+        unwieldy spreadsheets to manage their volunteers and requests of help. 
       </p>
+      <div className={photoStyles.photo}>
+        <img src={'/images/covaid1.png'} className={photoStyles.photoreal}/>
+      </div>
+      <p className={photoStyles.albumtext}>
+        So, wanting to play our part, 
+        we built Covaid: a platform to manage and coordinate mutual aid efforts by connecting community volunteers
+        with those in need.
+      </p>
+      <p className={photoStyles.albumtext}> 
+        On the platform, volunteers sign up as part of a specific organization 
+        (<a href='https://www.pittsburghmutualaid.com/'>Pittsburgh Mutual Aid</a>) or 
+        independently if one oesn’t exist in their area. They can create offers of help with tasks such 
+        as grocery delivery or medication pickup. Those in need can then submit a request for support, 
+        after which Covaid will match them with the nearest volunteers. Through this platform, we hoped to
+        make needs-matching easier for organizations so that they could dedicate more time to connecting
+        with their community. At the same time, we also hoped to make it much easier and more accessible for 
+        people in need to get support. Ultimately, in building this, we hoped a tool like this would give 
+        people’s kindness and generosity a platform to create change.
+      </p>
+      <div className={photoStyles.photo}>
+        <img src={'/images/covaid2.png'} className={photoStyles.photoreal}/>
+      </div>
+      {/* <p className={photoStyles.albumtext}>
+        As we continued to grow the platform, our main goal was connecting with other mutual aid groups.
+      </p> */}
     </div>
   </>)
 }

@@ -3,12 +3,12 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import photoStyles from '../../styles/photos.module.css'
 
-const images = [1, 2, 2, 2, 2, 1, 2, 2, 1] // sizes;
-const title = 'Bye John Kim'
-const date = 'May 2020'
-const base_url = '/images/byejohn/';
+const images = [1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1] // sizes;
+const title = 'Longwood Gardens'
+const date = 'December 2017'
+const base_url = '/images/longwood/';
 
-export default function ByeJohn() {
+export default function Longwood() {
   const [opened, setOpened] = useState(false);
   const [currImageNum, setCurrImageNum] = useState(1);
   const openImage = (imgURL) => {
@@ -54,6 +54,17 @@ export default function ByeJohn() {
       </div>
     </Layout>
     <div className={photoStyles.phototext}>
+      {/* <p className={photoStyles.albumhighlighttext}>
+        This was my first time in Europe and first spring break trip outside the US.
+      </p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/_RWJC-YpHFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+      <p className={photoStyles.albumtext}>
+        This trip happened back in my sophomore year of college when we found out that tickets
+        to Iceland were on going for way too cheap (After our trip, they quickly realized and stopped the deal). 
+        For just $300, we booked a roundtrip ticket and were on our way. Luckily, I was inspired by Casey 
+        Neistat at the time and happened to create a vlog of the trip.
+      </p> */}
     </div>
     <div className={photoStyles.photoscontainer}>
       {images.map((imagesize, i) => {

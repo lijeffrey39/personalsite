@@ -63,7 +63,13 @@ const locations = [
     'year': '2019',
     'folder': 'tedx',
     'url': '/photography/tedx'
-  }, 
+  },
+  {
+    'name': 'Longwood Gardens',
+    'year': '2017',
+    'folder': 'longwood',
+    'url': '/photography/longwood'
+  },
   {
     'name': 'NYC',
     'year': '2018',
