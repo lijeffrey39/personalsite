@@ -97,7 +97,7 @@ export default function Layout({ children, home, photography, album, projects, p
         />
         <meta
           property="og:image"
-          content={'/back.png'}
+          content={'https://jeffyli.com/back.png'}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
