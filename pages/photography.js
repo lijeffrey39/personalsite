@@ -59,6 +59,12 @@ const locations = [
     'url': '/photography/pittexplore'
   },
   {
+    'name': '1000 Plus',
+    'year': '2019',
+    'folder': '1000plus',
+    'url': '/photography/1000plus'
+  },
+  {
     'name': 'Bye John Kim',
     'year': '2020',
     'folder': 'byejohn',
